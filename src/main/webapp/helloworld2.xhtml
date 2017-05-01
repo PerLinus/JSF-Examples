@@ -1,18 +1,17 @@
 <?xml version='1.0' encoding='UTF-8' ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:head>
-    <title>Hello</title>
+    <title>Hello World</title>
 </h:head>
 <h:body>
-    <h:outputText id="helloID" value="Hello!"></h:outputText>
+    <h3>#{helloWorld2.getMessage()}</h3>
+    Man kan också skriva #{helloWorld2.message}
     <br />
-    <h:link value = "Gå till helloworld" outcome = "helloworld" />
-    <br />
-    <h:link value = "Gå till helloworld som använder MessageProperty" outcome = "helloworld2" />
-
+    <h:link value = "Gå till den sida som bönan anger" outcome = "#{helloWorld2.goToPage()}" />
 </h:body>
 </html>
