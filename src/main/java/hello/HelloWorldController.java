@@ -2,7 +2,7 @@ package hello;
 
 import javax.inject.Named;
 
-@Named
+@Named(value="helloWorld")
 public class HelloWorldController {
     public HelloWorldController() {
     }
