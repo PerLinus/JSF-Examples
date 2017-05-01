@@ -11,5 +11,7 @@
 <h:body>
     <h3>#{helloWorld.getMessage()}</h3>
     Man kan också skriva #{helloWorld.message}
+    <br />
+    <h:link value = "Gå till den sida som bönan anger" outcome = "#{helloWorld.goToPage()}" />
 </h:body>
 </html>
