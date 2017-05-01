@@ -5,11 +5,11 @@ Exempel.
  
 ## Stegvis förfining
 Utvecklingen av repot sker vi stegvis förfining där varje steg är taggat.
-* Steg 1 heter steg1<br/>
+* Steg 1 heter step1<br/>
 Som bara innehåller struktur + index-html
-* Nästa steg steg2 med enkelt böna
+* Nästa steg step2 med enkelt böna
 * osv
 
 ## Observera
-I ett av stegn var vi tvugna att byta ut @Named-annoteringar mot @ManagedBean-annoteringar.<br />
+I ett av stegen var vi tvugna att byta ut @Named-annoteringar mot @ManagedBean-annoteringar.<br />
 För annars fungerar inte @ManagedProperty-annoteringar!
