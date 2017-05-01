@@ -1,8 +1,8 @@
 package hello;
 
-import javax.inject.Named;
+import javax.faces.bean.ManagedBean;
 
-@Named(value="helloWorld")
+@ManagedBean(name="helloWorld", eager = true)
 public class HelloWorldController {
     public HelloWorldController() {
     }
