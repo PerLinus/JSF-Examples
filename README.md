@@ -1,5 +1,5 @@
 # JSF, Java Server Faces
-Exempel.
+Detta repo innehåller diverse JSF-exempel
 ## Enkel struktur
  Med bla WEB-INF/web.xml och pom.xml
  
