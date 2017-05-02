@@ -11,14 +11,14 @@ public class HelloWorldViaMessageCDIController {
     @Inject
     private MessageCDI messageBean;
 
-    //Vi måste ha en setters för dom managed properties som vi använder
-    public void setMessageBean(MessageCDI messageBean) {
-        this.messageBean = messageBean;
-    }
-
-    public MessageCDI getMessageBean() {
-        return messageBean;
-    }
+    //Om vi använder CDI, dvs @Named och @Inject behöver vi inte setter och getter för det vi injectar
+//    public void setMessageBean(MessageCDI messageBean) {
+//        this.messageBean = messageBean;
+//    }
+//
+//    public MessageCDI getMessageBean() {
+//        return messageBean;
+//    }
 
     public HelloWorldViaMessageCDIController() {
     }
