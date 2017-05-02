@@ -3,7 +3,7 @@ package customers;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-@ManagedBean(name = "customer")//Vi har problem med @Named... Varför?
+@ManagedBean(name = "customer")
 @RequestScoped
 public class Customer {
     private String firstName;
