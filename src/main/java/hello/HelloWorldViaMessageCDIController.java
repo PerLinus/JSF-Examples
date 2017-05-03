@@ -20,18 +20,14 @@ public class HelloWorldViaMessageCDIController {
 //        return messageBean;
 //    }
 
-    @Inject
-    private ServiceTest service;
-
     public HelloWorldViaMessageCDIController() {
     }
 
     public String getMessage() {
         String message = "Ej satt";
-        if(service != null){
-            message = service.getMessage();
+        if(messageBean != null){
+            message = messageBean.getMessage();
         }
-        service.setMessage("x"); //Detta anropas flera ggr så byt mot bättre gränssnitt
         return message;
     }
 
