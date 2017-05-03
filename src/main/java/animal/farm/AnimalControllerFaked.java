@@ -11,7 +11,7 @@ public class AnimalControllerFaked {
     @Inject
     AnimalFarmService service;
 
-    public Collection<AnimalInterface> geAllAnimals() {
+    public Collection<AnimalInterface> getAllAnimals() {
         return service.getAllAnimals();
     }
 
