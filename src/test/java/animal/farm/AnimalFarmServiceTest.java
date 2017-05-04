@@ -1,7 +1,9 @@
 package animal.farm;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runners.Parameterized;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,6 +24,7 @@ public class AnimalFarmServiceTest {
     public void init() {
         service = new AnimalFarmService();
     }
+
     @Test
     public void getAllAnimals() throws Exception {
         assertTrue(service.getAllAnimals().isEmpty());
@@ -41,7 +44,7 @@ public class AnimalFarmServiceTest {
         assertEquals(2, allAnimals.size());
         Set<AnimalInterface> foundAnimals = new HashSet<>();
         Set<Integer> ids = new HashSet<>();
-        for (AnimalInterface animal: allAnimals) {
+        for (AnimalInterface animal : allAnimals) {
             foundAnimals.add(animal);
             ids.add(animal.getId());
         }
@@ -73,7 +76,7 @@ public class AnimalFarmServiceTest {
 
     private void createTestAnimalsAndAddThemToService() {
         Collection<AnimalInterface> animals = createSomeAnimals();
-        for (AnimalInterface animal: animals) {
+        for (AnimalInterface animal : animals) {
             service.add(animal);
         }
     }
