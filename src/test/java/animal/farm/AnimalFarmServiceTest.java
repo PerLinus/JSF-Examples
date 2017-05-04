@@ -26,8 +26,12 @@ public class AnimalFarmServiceTest {
     }
 
     @Test
-    public void getAllAnimals() throws Exception {
+    public void getAllAnimalsInitialState() throws Exception {
         assertTrue(service.getAllAnimals().isEmpty());
+    }
+
+    @Test
+    public void getAllAnimalsWithOneAnimal() throws Exception {
         String fido = "Fido";
         String bettan = "Bettan";
         Dog dog = new Dog(fido, bettan);
@@ -38,10 +42,29 @@ public class AnimalFarmServiceTest {
         assertEquals(fido, first.getName());
         assertEquals(bettan, first.getOwnersName());
         assertNotNull(first.getId());
+    }
+
+    @Test
+    public void getAllAnimalsTwoAnimals() throws Exception {
+        String fido = "Fido";
+        String bettan = "Bettan";
+        Dog dog = new Dog(fido, bettan);
+        service.add(dog);
         Cat cat = new Cat(bettan, fido);
         service.add(cat);
-        allAnimals = service.getAllAnimals();
+        Collection<AnimalInterface> allAnimals = service.getAllAnimals();
         assertEquals(2, allAnimals.size());
+    }
+
+    @Test
+    public void getAllAnimalsCheckUniqueness() throws Exception {
+        String fido = "Fido";
+        String bettan = "Bettan";
+        Dog dog = new Dog(fido, bettan);
+        service.add(dog);
+        Cat cat = new Cat(bettan, fido);
+        service.add(cat);
+        Collection<AnimalInterface> allAnimals = service.getAllAnimals();
         Set<AnimalInterface> foundAnimals = new HashSet<>();
         Set<Integer> ids = new HashSet<>();
         for (AnimalInterface animal : allAnimals) {
