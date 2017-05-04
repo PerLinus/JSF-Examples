@@ -13,6 +13,8 @@
 <h:body>
     <h:form id="mainForm">
     <p:dataTable id="singleDT" var="car" value="#{dtSelectionView.cars}" selectionMode="single" selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}">
+        <!-- Om vi vill anropa dtSelectionView direkt när vi väljetr i listan måste vi skapa ett ajaxevent på raden -->
+        <p:ajax event="rowSelect" update="@this" />
         <f:facet name="header">
             Single with Row Click
         </f:facet>
