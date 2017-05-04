@@ -21,7 +21,7 @@ public class AnimalFarmService {
 
     public void add(AnimalInterface animal) {
         animal.setId(currentId++);
-        animals.put(currentId, animal);
+        animals.put(animal.getId(), animal);
     }
 
     public Collection<AnimalInterface> getAllAnimalsMatchingName(String name) {
