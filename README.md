@@ -25,3 +25,8 @@ För annars fungerar inte @ManagedProperty-annoteringar!
 ## För att få @Named och @Inject att fungera
 Behöver man en fil **beans.xml** i **WEB-INF**-katalogen. Denna fil kan vara tom.<br />
 Detta gäller i alla fall för JBoss.
+
+## Finns numera ett enkelt första Primefacesexempel
+### En enkel tabell med bilar
+Förebild Primefaces showcase <br />
+Tagsteg: step13
