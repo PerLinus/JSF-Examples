@@ -13,7 +13,7 @@
 <h:body>
     <h:form id="mainForm">
     <p:dataTable id="singleDT" var="car" value="#{dtSelectionView.cars}" selectionMode="single" selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}">
-        <!-- Om vi vill anropa dtSelectionView direkt när vi väljetr i listan måste vi skapa ett ajaxevent på raden -->
+        <!-- Om vi vill anropa dtSelectionView direkt när vi väljer i listan måste vi skapa ett ajaxevent på raden -->
         <p:ajax event="rowSelect" update="@this" />
         <f:facet name="header">
             Single with Row Click
@@ -31,7 +31,7 @@
             <h:outputText value="#{car.color}" />
         </p:column>
         <f:facet name="footer">
-            <p:commandButton process="singleDT" update="@all" icon="ui-icon-search" value="Trigga val"  />
+            <p:commandButton process="singleDT" update="@this" icon="ui-icon-search" value="Trigga val"  />
         </f:facet>
     </p:dataTable>
     </h:form>
